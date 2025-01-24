@@ -17,7 +17,7 @@ module ForemanNetbox
                          .select { |i| i[:name] }
                          .reject { |i| interfaces.map(&:name).include?(i[:name]) }
                          .map do |new_interface|
-                           ForemanNetbox::API.client::Virtualization::Interface.new(
+                           ForemanNetbox::Api.client::Virtualization::Interface.new(
                              new_interface.except(:type)
                                           .merge(
                                             virtual_machine: virtual_machine.id,
