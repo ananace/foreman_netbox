@@ -14,7 +14,7 @@ module ForemanNetbox
           context.raw_data[:virtual_machine] = context.virtual_machine.raw_data!
         end
 
-        organize SyncVirtualMachine::Validate,
+        organize \
           SyncHost::SyncTags::Organizer,
           SyncHost::SyncTenant::Organizer,
           SyncVirtualMachine::SyncCluster::Organizer,

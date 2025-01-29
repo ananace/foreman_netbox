@@ -14,7 +14,7 @@ module ForemanNetbox
           context.raw_data[:device] = context.device.raw_data! if context.device
         end
 
-        organize SyncDevice::Validate,
+        organize \
           SyncHost::SyncTags::Organizer,
           SyncHost::SyncTenant::Organizer,
           SyncDevice::SyncSite::Organizer,
